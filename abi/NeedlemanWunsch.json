@@ -1,0 +1,364 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract SubstitutionMatrices",
+        "name": "_matricesAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "_addAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "_changeOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_getAdmins",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_getOwner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "_isAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "_isOwner",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract SubstitutionMatrices",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "_linkToMatricesAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "sequenceA",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "sequenceB",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "int256",
+            "name": "gap",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "limit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "matrix",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct PairwiseAlignment.AlignmentOptions",
+        "name": "alignmentOptions",
+        "type": "tuple"
+      }
+    ],
+    "name": "_needlemanWunsch",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "sequenceA",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "sequenceB",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "alignmentA",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "alignmentB",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct PairwiseAlignment.Alignment[]",
+            "name": "alignments",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "int256",
+            "name": "score",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "count",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PairwiseAlignment.AlignmentOutput",
+        "name": "alignmentOutput",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_relinkAlphabets",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "_removeAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "limit",
+        "type": "uint256"
+      }
+    ],
+    "name": "_updateDefaultLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "limit",
+        "type": "uint256"
+      }
+    ],
+    "name": "_updateHardLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "defaultLimit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "hardLimit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "matricesContract",
+    "outputs": [
+      {
+        "internalType": "contract SubstitutionMatrices",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "sequenceA",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "sequenceB",
+        "type": "string"
+      },
+      {
+        "internalType": "int256",
+        "name": "gap",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "limit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "matrix",
+        "type": "string"
+      }
+    ],
+    "name": "needlemanWunsch",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "sequenceA",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "sequenceB",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "alignmentA",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "alignmentB",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct PairwiseAlignment.Alignment[]",
+            "name": "alignments",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "int256",
+            "name": "score",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "count",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PairwiseAlignment.AlignmentOutput",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
